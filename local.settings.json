@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "{ Your Azure Storage Connection String }",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "SENDGRID_API_KEY": "{ Your SendGrid API Key }",
+    "SENDGRID_TEMPLATE_ID": "{ Your SendGrid Template ID }"
+  }
+}
