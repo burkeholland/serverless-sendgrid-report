@@ -2,10 +2,24 @@
   "disabled": false,
   "bindings": [
     {
-      "name": "myTimer",
-      "type": "timerTrigger",
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
       "direction": "in",
-      "schedule": "0 0 */24 * * *"
+      "name": "req",
+      "methods": ["get", "post"]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "sendGrid",
+      "name": "message",
+      "apiKey": "SENDGRID_API_KEY",
+      "to": "someone@somewhere.com",
+      "from": "somebody.person@acompany.com",
+      "direction": "out"
     }
   ]
 }
