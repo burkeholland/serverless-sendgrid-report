@@ -2,23 +2,17 @@
   "disabled": false,
   "bindings": [
     {
-      "authLevel": "anonymous",
-      "type": "httpTrigger",
+      "name": "myTimer",
+      "type": "timerTrigger",
       "direction": "in",
-      "name": "req",
-      "methods": ["get", "post"]
-    },
-    {
-      "type": "http",
-      "direction": "out",
-      "name": "res"
+      "schedule": "0 0 */24 * * *"
     },
     {
       "type": "sendGrid",
       "name": "message",
       "apiKey": "SENDGRID_API_KEY",
-      "to": "someone@somewhere.com",
-      "from": "somebody.person@acompany.com",
+      "to": "someone@microsoft.com",
+      "from": "tailwind.reports@tailwind.com",
       "direction": "out"
     }
   ]
