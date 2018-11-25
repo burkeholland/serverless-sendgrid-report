@@ -6,15 +6,20 @@
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "methods": [
-        "get",
-        "post"
-      ]
+      "methods": ["get", "post"]
     },
     {
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "type": "sendGrid",
+      "name": "message",
+      "apiKey": "SENDGRID_API_KEY",
+      "to": "someone@somewhere.com",
+      "from": "somebody.person@acompany.com",
+      "direction": "out"
     }
   ]
 }
